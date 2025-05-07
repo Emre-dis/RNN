@@ -1,8 +1,8 @@
-## 📊 Recurrent Neural Network (RNN) Karşılaştırması: NumPy vs PyTorch GRU
+## 📊 Recurrent Neural Network (RNN) Karşılaştırması: SimpleRnn vs PyTorch GRU
 
 Bu proje, doğal dil işleme (NLP) bağlamında duygu analizi yapmak için iki farklı RNN yaklaşımını karşılaştırır:
 
-* `Rnn.py`: NumPy ile sıfırdan yazılmış bir Vanilla RNN (Many-to-One mimarisiyle).
+* `Rnn.py`: Sıfırdan yazılmış bir RNN (Many-to-One mimarisiyle).
 * `Rnn3.py`: PyTorch framework'ü ile geliştirilmiş, embedding ve dropout destekli bir GRU modeli.
 
 Her iki model de ikili sınıflandırma (pozitif/negatif duygu) görevini yerine getirmek üzere eğitilmiş ve değerlendirilmiştir.
@@ -11,14 +11,13 @@ Her iki model de ikili sınıflandırma (pozitif/negatif duygu) görevini yerine
 
 ## 🧠 Kullanılan Modeller
 
-### 1. `Rnn.py` – NumPy ile Vanilla RNN
+### 1. `Rnn.py` – NumPy ile RNN
 
 #### 🔧 Özellikler:
 
 * Tamamen NumPy ile yazılmıştır.
 * Xavier (Glorot) ağırlık başlatma.
 * Truncated Backpropagation Through Time (BPTT) ile eğitim.
-* AdaGrad optimizasyonu.
 * One-hot vektörlerle giriş.
 * Binary cross-entropy loss + sigmoid aktivasyon.
 * Eğitim, doğruluk ve kayıp grafiklerinin görselleştirilmesi.
